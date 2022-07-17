@@ -1,0 +1,80 @@
+[
+  {
+    "Genre": "action",
+    "Films": 76,
+    "IMDB": 5.3,
+    "Profit": 1.47
+  },
+  {
+    "Genre": "adult",
+    "Films": 7,
+    "IMDB": 4.81,
+    "Profit": 0.86
+  },
+  {
+    "Genre": "comedy",
+    "Films": 198,
+    "IMDB": 5.02,
+    "Profit": 1.14
+  },
+  {
+    "Genre": "documentary",
+    "Films": 1,
+    "IMDB": 8.6,
+    "Profit": 1.67
+  },
+  {
+    "Genre": "drama",
+    "Films": 344,
+    "IMDB": 6.09,
+    "Profit": 0.81
+  },
+  {
+    "Genre": "fantasy",
+    "Films": 10,
+    "IMDB": 3.74,
+    "Profit": 0.33
+  },
+  {
+    "Genre": "horror",
+    "Films": 25,
+    "IMDB": 4.29,
+    "Profit": 1.01
+  },
+  {
+    "Genre": "love_story",
+    "Films": 86,
+    "IMDB": 5.24,
+    "Profit": 1.04
+  },
+  {
+    "Genre": "masala",
+    "Films": 12,
+    "IMDB": 4.71,
+    "Profit": 2.59
+  },
+  {
+    "Genre": "mythological",
+    "Films": 3,
+    "IMDB": 6.97,
+    "Profit": 0.06
+  },
+  {
+    "Genre": "rom__com",
+    "Films": 66,
+    "IMDB": 5.53,
+    "Profit": 1.36
+  },
+  {
+    "Genre": "suspense",
+    "Films": 10,
+    "IMDB": 5.82,
+    "Profit": 0.48
+  },
+  {
+    "Genre": "thriller",
+    "Films": 143,
+    "IMDB": 5.33,
+    "Profit": 0.93
+  }
+]
