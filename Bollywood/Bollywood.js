@@ -22,13 +22,21 @@ function draw() {
   credit();
 }
 
+function star(x, y, radius) {
+  beginShape();
+  for (let i = 0; i < 5; i++) {
+    let angle = i * TWO_PI / 5;
+    vertex(x + cos(angle) * radius, y + sin(angle) * radius);
+  }
+  endShape(CLOSE);
+}
 // Function to create the Squares for the first half
 function drawSquare1() {
   // 5 squares for first 5 movies
   for (let i = 0; i < 5; i++) {
     // Color according to the Genre
     if (data[i].Genre == "Action") {
-      fill(230, 57, 70);
+      fill(217,4,40);
     } else if (data[i].Genre == "Romance") {
       fill(254, 153, 200);
     } else if (data[i].Genre == "Drama") {
@@ -36,7 +44,7 @@ function drawSquare1() {
     } else if (data[i].Genre == "Thriller") {
       fill(140, 154, 174);
     } else {
-      fill(252, 163, 16);
+      fill(251,86,7);
     }
     stroke(0);
     strokeWeight(2);
@@ -65,16 +73,16 @@ function drawSquare1() {
     // Revenue Ellipse
     let revenue = data[i].Revenue;
     let mappedRevenue = map(revenue, 324535000, 3959242500, 1, 10);
-    fill(74, 78, 105,200);
+    fill(168, 201, 87, 200);
     ellipseMode(CENTER);
     ellipse(i * 200 + 125, 200, mappedRevenue * 8, mappedRevenue * 8);
 
     // Profit Factor Ellipse
-    let profit = data[i].ProfitFactor;
-    let mappedProfit = map(profit, 0, 4, 1, 10);
-    fill(168, 201, 87, 100);
-    ellipseMode(CENTER);
-    ellipse(i * 200 + 125, 200, mappedProfit * 4, mappedProfit * 4);
+    // let profit = data[i].ProfitFactor;
+    // let mappedProfit = map(profit, 0, 4, 1, 10);
+    // fill(168, 201, 87, 100);
+    // ellipseMode(CENTER);
+    // ellipse(i * 200 + 125, 200, mappedProfit * 4, mappedProfit * 4);
 
     // Arrow for Duration
     let duration = data[i].Duration;
@@ -84,11 +92,19 @@ function drawSquare1() {
     strokeWeight(3);
     rect(i * 200 + 42, 120, 2, mappedDuration * 10);
 
-    textStyle(NORMAL);
-    textSize(20);
+    // Arc for Rating
+    let rating = data[i].Rating;
+    let mappedRating = map(rating, 5.3, 8, 1, 10);
+    fill(245,197,24,200);
+    stroke(0);
     strokeWeight(1);
-    fill(0);
-    text(data[i].Rating.toFixed(1), i * 200 + 165, 140);
+    ellipseMode(CENTER);
+    ellipse(i * 200 + 170, 140, mappedRating * 4, mappedRating * 4);
+    // textStyle(NORMAL);
+    // textSize(20);
+    // strokeWeight(1);
+    // fill(0);
+    // text(data[i].Rating.toFixed(1), i * 200 + 165, 140);
   }
 }
 
@@ -97,7 +113,7 @@ function drawSquare2() {
   // 5 squares for next 5 movies
   for (let k = 5; k < 10; k++) {
     if (data[k].Genre == "Action") {
-      fill(230, 57, 70);
+      fill(217,4,40);
     } else if (data[k].Genre == "Romance") {
       fill(254, 153, 200);
     } else if (data[k].Genre == "Drama") {
@@ -105,7 +121,7 @@ function drawSquare2() {
     } else if (data[k].Genre == "Thriller") {
       fill(140, 154, 174);
     } else {
-      fill(252, 163, 16);
+      fill(251,86,7);
     }
     stroke(0);
     strokeWeight(2);
@@ -121,6 +137,8 @@ function drawSquare2() {
     textStyle(NORMAL);
     text("Dir: " + data[k].Director, k * 200 - 950, 530);
 
+    
+    
     // Budget Ellipse
     let budget = data[k].Budget;
     let mappedBudget = map(budget, 140000000, 1270000000, 1, 10);
@@ -128,21 +146,39 @@ function drawSquare2() {
     strokeWeight(2);
     fill(255, 229, 217, 200);
     ellipseMode(CENTER);
-    ellipse(k * 200 - 880, 430, mappedBudget * 10, mappedBudget * 10);
+    ellipse(k * 200 - 880, 430, mappedBudget*10, mappedBudget*10);
 
     // Revenue Ellipse
     let revenue = data[k].Revenue;
     let mappedRevenue = map(revenue, 324535000, 3959242500, 1, 10);
-    fill(74, 78, 105,200);
+    fill(168, 201, 87, 200);
     ellipseMode(CENTER);
     ellipse(k * 200 - 880, 430, mappedRevenue * 8, mappedRevenue * 8);
 
-    // Profit Factor Ellipse
-    let profit = data[k].ProfitFactor;
-    let mappedProfit = map(profit, 0, 4, 1, 10);
-    fill(168, 201, 87, 100);
+    // // Profit Factor Ellipse
+    // let profit = data[k].ProfitFactor;
+    // let mappedProfit = map(profit, 0, 4, 1, 10);
+    // fill(168, 201, 87, 100);
+    // ellipseMode(CENTER);
+    // ellipse(k * 200 - 880, 430, mappedProfit * 4, mappedProfit * 4)
+    
+    let rating = data[k].Rating;
+    let mappedRating = map(rating, 5.3, 8, 1, 10);
+    fill(245,197,24,200);
+    stroke(0);
+    strokeWeight(1);
     ellipseMode(CENTER);
-    ellipse(k * 200 - 880, 430, mappedProfit * 4, mappedProfit * 4);
+    ellipse(k * 200 - 830, 370, mappedRating * 4, mappedRating * 4);
+
+
+
+
+
+
+
+  
+
+    
 
     // Arrow for Duration
     let duration = data[k].Duration;
@@ -158,7 +194,7 @@ function drawSquare2() {
     fill(0);
 
     // round to 2 decimal places
-    text(data[k].Rating.toFixed(1), k * 200 - 835, 370);
+    // text(data[k].Rating.toFixed(1), k * 200 - 835, 370);
   }
 }
 
@@ -183,20 +219,23 @@ function legendRead() {
 
   stroke(0);
   strokeWeight(1);
-  fill(252, 163, 16);
+  fill(251,86,7);
   rect(1180, 520, 150, 150);
   ellipseMode(CENTER);
+
+  fill(245,197,24,200);
+  ellipse(1306, 535, 20, 20);
 
   fill(255, 229, 217, 200);
   stroke(33, 37, 41);
   strokeWeight(2);
   ellipse(1256, 595, 100, 100);
 
-  fill(74, 78, 105, 200);
+  fill(168, 201, 87, 200);
   ellipse(1256, 595, 70, 70);
 
-  fill(168, 201, 87, 100);
-  ellipse(1256, 595, 40, 40);
+  // fill(168, 201, 87, );
+  // ellipse(1256, 595, 40, 40);
 
   fill(100);
   stroke(0);
@@ -211,7 +250,7 @@ function legendRead() {
   textSize(20);
   text("Genre", 1225, 140);
   
-  fill(230, 57, 70);
+  fill(217,4,40);
   rect(1200, 150, 120, 40);
   textSize(16);
   fill(0);
@@ -232,7 +271,7 @@ function legendRead() {
   fill(0);
   text("Thriller", 1230, 325);
 
-  fill(252, 163, 16);
+  fill(251,86,7);
   rect(1200, 350, 120, 40);
   fill(0);
   text("Masala", 1230, 375);
@@ -240,20 +279,20 @@ function legendRead() {
   // Lines for the legend
   stroke(0);
   strokeWeight(1);
-  line(1255, 590, 1255, 480);
+  line(1305, 530, 1305, 480);
   line(1205, 550, 1205, 480);
   line(1150, 618, 1260, 618);
   line(1150, 645, 1260, 645);
 
   // Text for the legend
   fill(0);
-  textSize(16);
-  text("IMDb 7.5", 1263, 535);
+  // textSize(16);
+  // text("IMDb 7.5", 1263, 535);
   textSize(12);
   strokeWeight(0);
   text("Budget", 1150, 645);
   text("Revenue", 1150, 618);
-  text("Profit Factor", 1255, 480);
+  text("IMDb Rating", 1255, 480);
   text("Genre", 1190, 480);
 
   // rotate text 90 Duration
