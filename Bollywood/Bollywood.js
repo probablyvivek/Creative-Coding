@@ -274,13 +274,13 @@ function credit() {
 }
 
 // Saving the image by creating a button
-function saveImg() {
-  btnSave = createButton("Save Image");
-  btnSave.position(50, 670);
-  btnSave.mousePressed(saveImg);
-  btnSave.style("background-color", "cornsilk");
-  if (btnSave.mousePressed) {
-    saveCanvas("Top10ShahrukhKhanMovies", "png");
-  }
-}
+// function saveImg() {
+//   btnSave = createButton("Save Image");
+//   btnSave.position(50, 670);
+//   btnSave.mousePressed(saveImg);
+//   btnSave.style("background-color", "cornsilk");
+//   if (btnSave.mousePressed) {
+//     saveCanvas("Top10ShahrukhKhanMovies", "png");
+//   }
+// }
 
