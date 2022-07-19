@@ -10,6 +10,7 @@ function setup() {
   fill(0, 0, 0, 1);
   rect(0, 0, 1350, 700);
   textFont("Trebuchet MS");
+  // saveImg();
 }
 
 // Call the functions
@@ -270,6 +271,7 @@ function credit() {
   text("Data Source: India in Pixels", 10, 675);
   text("Created by @Stateastic using p5.js", 10, 690);
 }
+
 
 // Saving the image by creating a button
 // function saveImg() {
