@@ -10,8 +10,6 @@ function setup() {
   fill(0, 0, 0, 1);
   rect(0, 0, 1350, 700);
   textFont("Trebuchet MS");
-  saveImg();
-  
 }
 
 // Call the functions
