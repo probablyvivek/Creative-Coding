@@ -1,0 +1,16 @@
+html, body {
+  /* centre align canvas */
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: cornsilk;
+}
+
+canvas {
+  display: block;
+  box-shadow: 5px 3px 3px black;
+  border: 1px solid black;
+}
