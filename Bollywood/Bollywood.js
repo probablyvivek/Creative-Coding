@@ -56,23 +56,23 @@ function drawSquare1() {
     // Budget Ellipse
     let budget = data[i].Budget;
     let mappedBudget = map(budget, 140000000, 1270000000, 1, 10);
-    fill(255, 229, 217, 200);
-    stroke(33, 37, 41, 200);
+    stroke(33, 37, 41);
     strokeWeight(2);
+    fill(255, 229, 217, 200);
     ellipseMode(CENTER);
     ellipse(i * 200 + 125, 200, mappedBudget * 10, mappedBudget * 10);
 
     // Revenue Ellipse
     let revenue = data[i].Revenue;
     let mappedRevenue = map(revenue, 324535000, 3959242500, 1, 10);
-    fill(74, 78, 105);
+    fill(74, 78, 105,200);
     ellipseMode(CENTER);
     ellipse(i * 200 + 125, 200, mappedRevenue * 8, mappedRevenue * 8);
 
     // Profit Factor Ellipse
     let profit = data[i].ProfitFactor;
     let mappedProfit = map(profit, 0, 4, 1, 10);
-    fill(168, 201, 87, 200);
+    fill(168, 201, 87, 100);
     ellipseMode(CENTER);
     ellipse(i * 200 + 125, 200, mappedProfit * 4, mappedProfit * 4);
 
@@ -124,23 +124,23 @@ function drawSquare2() {
     // Budget Ellipse
     let budget = data[k].Budget;
     let mappedBudget = map(budget, 140000000, 1270000000, 1, 10);
-    fill(255, 229, 217, 200);
-    stroke(33, 37, 41, 200);
+    stroke(33, 37, 41);
     strokeWeight(2);
+    fill(255, 229, 217, 200);
     ellipseMode(CENTER);
     ellipse(k * 200 - 880, 430, mappedBudget * 10, mappedBudget * 10);
 
     // Revenue Ellipse
     let revenue = data[k].Revenue;
     let mappedRevenue = map(revenue, 324535000, 3959242500, 1, 10);
-    fill(74, 78, 105);
+    fill(74, 78, 105,200);
     ellipseMode(CENTER);
     ellipse(k * 200 - 880, 430, mappedRevenue * 8, mappedRevenue * 8);
 
     // Profit Factor Ellipse
     let profit = data[k].ProfitFactor;
     let mappedProfit = map(profit, 0, 4, 1, 10);
-    fill(168, 201, 87, 230);
+    fill(168, 201, 87, 100);
     ellipseMode(CENTER);
     ellipse(k * 200 - 880, 430, mappedProfit * 4, mappedProfit * 4);
 
@@ -192,10 +192,10 @@ function legendRead() {
   strokeWeight(2);
   ellipse(1256, 595, 100, 100);
 
-  fill(74, 78, 105);
+  fill(74, 78, 105, 200);
   ellipse(1256, 595, 70, 70);
 
-  fill(168, 201, 87, 230);
+  fill(168, 201, 87, 100);
   ellipse(1256, 595, 40, 40);
 
   fill(100);
