@@ -22,14 +22,15 @@ function draw() {
   credit();
 }
 
-function star(x, y, radius) {
-  beginShape();
-  for (let i = 0; i < 5; i++) {
-    let angle = i * TWO_PI / 5;
-    vertex(x + cos(angle) * radius, y + sin(angle) * radius);
-  }
-  endShape(CLOSE);
-}
+// function star(x, y, radius) {
+//   beginShape();
+//   for (let i = 0; i < 5; i++) {
+//     let angle = i * TWO_PI / 5;
+//     vertex(x + cos(angle) * radius, y + sin(angle) * radius);
+//   }
+//   endShape(CLOSE);
+// }
+
 // Function to create the Squares for the first half
 function drawSquare1() {
   // 5 squares for first 5 movies
@@ -59,7 +60,7 @@ function drawSquare1() {
     textStyle(NORMAL);
     text("Dir: " + data[i].Director, i * 200 + 50, 300);
 
-    // TODO: Learn how to use max and min to get the max and min value of the array instead of manually writing it
+    // TODO: Learn how to use max and min to get the max and min value of the array instead of manually writing it const max = Math.max(...Object.values(data).map(v=>v.Budget))
 
     // Budget Ellipse
     let budget = data[i].Budget;
@@ -169,16 +170,6 @@ function drawSquare2() {
     strokeWeight(1);
     ellipseMode(CENTER);
     ellipse(k * 200 - 830, 370, mappedRating * 4, mappedRating * 4);
-
-
-
-
-
-
-
-  
-
-    
 
     // Arrow for Duration
     let duration = data[k].Duration;
