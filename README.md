@@ -9,6 +9,10 @@ p5.js is a JavaScript library for creative coding, with a focus on making coding
 1. [p5js Youtube Tutorial](https://www.youtube.com/watch?v=HerCR8bw_GE&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=1)
 2. [Discord Channel](https://discord.gg/h9gztZfEKc)
 3. [p5 Reference](https://p5js.org/reference/)
+4. [An Algorithm for Irregular Grids](https://gorillasun.de/blog/an-algorithm-for-irregular-grids)
+5. [An artist's guide to talking mathematics with p5.js](https://synchrony.cc/)
+6. [Working with SVGs in p5JS](https://gorillasun.de/blog/working-with-svgs-in-p5js)
+7. [Making Simple Patterns](https://www.youtube.com/watch?v=ig0q6vfpD38)
 
 
 
