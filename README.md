@@ -2,7 +2,7 @@
 
 p5.js is a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else! p5.js is free and open-source because we believe software, and the tools to learn it, should be accessible to everyone.
 
---- 
+
 
 ## Resources to Learn
 
@@ -10,13 +10,13 @@ p5.js is a JavaScript library for creative coding, with a focus on making coding
 2. [Discord Channel](https://discord.gg/h9gztZfEKc)
 3. [p5 Reference](https://p5js.org/reference/)
 
----
+
 
 ## Where to Code?
 1. VS Code: Download this extension samplavigne.p5-vscode and Live Server to get the output.
 2. [p5 Editor](https://editor.p5js.org/)
 
----
+
 
 ## My Sketches
 1. [Emoji](https://editor.p5js.org/probablyvivek/full/mtad3eaFS)
@@ -26,5 +26,5 @@ p5.js is a JavaScript library for creative coding, with a focus on making coding
 5. [Matrix](https://editor.p5js.org/probablyvivek/full/_ur7vbrGO)
 6. 
    
----
+
 
