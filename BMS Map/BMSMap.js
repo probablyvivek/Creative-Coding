@@ -24,7 +24,7 @@ function draw() {
     const name = city.RegionName;
     const X = map(city.Long, 68, 97, 0, width);
     const Y = map(city.Lat, 8, 37, height, 0);
-    fill(245, 245, 245);
+    fill(245, 245, 245, 100);
     ellipse(X, Y, 6, 6, 50);
 
     const topcities = data.BookMyShow.TopCities;
@@ -32,12 +32,13 @@ function draw() {
       const name = city.RegionName;
       const X = map(city.Long, 68, 97, 0, width);
       const Y = map(city.Lat, 8, 37, height, 0);
-      fill(248, 67, 100, 50);
-      ellipse(X, Y, 30, 30);
       textAlign(RIGHT);
-      textSize(13);
+      textSize(15);
       fill(255);
       text(name, X, Y);
+      fill(248, 67, 100, 5);
+      noStroke();
+      ellipse(X, Y, 30, 30);
     }
   }
   image(img, 150, 0, 80, 60);
@@ -58,13 +59,9 @@ function draw() {
     fill(255);
     text("1600+ Cities", 550, 115);
   }
+  noLoop();
 }
 // save image
 function saveArt() {
   saveCanvas("BookMyShow.jpg");
 }
-// end of save image
-// end of BMSMap.js
-
-
-
