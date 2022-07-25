@@ -63,5 +63,5 @@ function draw() {
 }
 // save image
 function saveArt() {
-  saveCanvas("BookMyShow.jpg");
+  saveCanvas("MapBookMyShow.jpg");
 }
