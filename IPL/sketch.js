@@ -90,8 +90,8 @@ function draw() {
   }
 }
 
-function mousePressed() {
-  if (mouseButton === RIGHT) {
-    saveGif("mySketch", 3, 1);
-  }
-}
+// function mousePressed() {
+//   if (mouseButton === RIGHT) {
+//     saveGif("mySketch", 3, 1);
+//   }
+// }
