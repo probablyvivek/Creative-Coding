@@ -84,7 +84,7 @@ function draw() {
   function explainText(){
     fill(0);
     textSize(16);
-    text(" Only 10 Batsman have scored 100+ runs from boundaries in the IPL", 360, 480);
+    text(" Only 9 Batsman have scored 100+ runs from boundaries in the IPL", 360, 480);
     text(" Chris Gayle's name comes 3 times in the top 10 list of players who\n have scored the most runs from boundaries in the IPL and ofcourse\n there is ABD. Gayle's 175 runs innings had 154 runs which is the\n highest total in boundaries", 360, 520);
     text(" But it was Jayasuriya who has the highest (89%) of runs scored\n from boundaries in the IPL.", 360, 620);
   }
