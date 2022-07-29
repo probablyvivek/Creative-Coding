@@ -1,24 +1,34 @@
+// declare varibales for song and images
 let song;
 let img;
 let img1;
 
+// Load the JSON data
 let data;
 function preload() {
   data = loadJSON("BattingMostInns.json");
 }
 
+// variable for animation
 let barRoll = 0;
+
 
 function setup() {
   song = loadSound("IPL TRUMPET.mp3", loaded);
+  
+//   object create
   data = Object.values(data);
-  createCanvas(880, 740);
+  
+//   canvas create
+  createCanvas(860, 740);
+
   img = loadImage("logo.png");
   img1 = loadImage("IPL.png");
   background("#F9F9F9");
   textFont("Trebuchet MS");
-  // logo
+  
 }
+// Song load
 function loaded(){
   song.play();
   song.setVolume(0.8);
@@ -28,39 +38,49 @@ function draw() {
   explainText();
   image(img,10,620, 180,120);
   image(img1,180,695, 400,30);
+  
   for (let i = 0; i < data.length; i++) {
     translate(50, 0);
     let player = data[i];
     push()
+// Player run rectangle        
         noStroke();
         fill(34,49,126);
         rect(i*40, 0, 40, player.Runs*3);
+
+// Player Runs from boundaries rectangle
         fill(0,139,209)
         rect(10+i*40, 0, 20, player.RfB*3*barRoll)
         
         translate(i*40, 0);
         rotate(radians(90));
         
+// Player Name text
         noStroke();
         fill(255);
         textSize(20);
         text(player.Player, 10, -15);
 
+// Player Runs Text
         textSize(16);
         fill(34,49,126);
         textStyle(BOLD);
         text(player.Runs, 165, -15);
 
+// Player Runs from boundaries
         fill(255, 255, 255);
         textStyle(NORMAL);
         text("(" + player.RfB + ")", 200, -15);
     pop();
   }
+  
+// Animate the runs from boundaries rectangle
   barRoll += 0.005;
   if (barRoll > 1) {
     noLoop();
   }
-  
+
+//   Function to explain the graph
   function explainText(){
     fill(0);
     textSize(16);
@@ -70,3 +90,8 @@ function draw() {
   }
 }
 
+function mousePressed() {
+  if (mouseButton === RIGHT) {
+    saveGif("mySketch", 3, 1);
+  }
+}
