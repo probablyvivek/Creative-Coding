@@ -23,7 +23,7 @@ function setup() {
   createCanvas(860, 740);
 
   img = loadImage("logo.png");
-  img1 = loadImage("IPL.png");
+  img1 = loadImage("IPLMostRuns.png");
   background("#F9F9F9");
   textFont("Trebuchet MS");
   
@@ -45,11 +45,11 @@ function draw() {
     push()
 // Player run rectangle        
         noStroke();
-        fill(34,49,126);
+        fill(0,139,209);
         rect(i*40, 0, 40, player.Runs*3);
 
 // Player Runs from boundaries rectangle
-        fill(0,139,209)
+        fill(34,49,126)
         rect(10+i*40, 0, 20, player.RfB*3*barRoll)
         
         translate(i*40, 0);
@@ -63,7 +63,7 @@ function draw() {
 
 // Player Runs Text
         textSize(16);
-        fill(34,49,126);
+        fill(0,139,209);
         textStyle(BOLD);
         text(player.Runs, 165, -15);
 
